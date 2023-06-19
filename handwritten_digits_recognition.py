@@ -42,9 +42,9 @@ else:
 
 # Load custom images and predict them
 image_number = 1
-while os.path.isfile('digits/digit{}.png'.format(image_number)):
+while os.path.isfile('digit{}.png'.format(image_number)):
     try:
-        img = cv2.imread('digits/digit{}.png'.format(image_number))[:,:,0]
+        img = cv2.imread('digit{}.png'.format(image_number))[:,:,0]
         img = np.invert(np.array([img]))
         prediction = model.predict(img)
         print("The number is probably a {}".format(np.argmax(prediction)))
