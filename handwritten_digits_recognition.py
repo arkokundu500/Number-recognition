@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 
 print("This is Arko Kundu")
 
-# Decide if to load an existing model or to train a new one
 train_new_model = True
 
 if train_new_model:
@@ -18,10 +17,6 @@ if train_new_model:
     X_train = tf.keras.utils.normalize(X_train, axis=1)
     X_test = tf.keras.utils.normalize(X_test, axis=1)
 
-    # Create a neural network model
-    # Add one flattened input layer for the pixels
-    # Add two dense hidden layers
-    # Add one dense output layer for the 10 digits
     model = tf.keras.models.Sequential()
     model.add(tf.keras.layers.Flatten())
     model.add(tf.keras.layers.Dense(units=128, activation=tf.nn.relu))
